@@ -7,7 +7,7 @@ output_file = "hello.exe" if os.name == "nt" else "hello"
 
 # Compile C code
 print(" Compiling hello.c...")
-compile = subprocess.run(['gcc', 'hello.c', '-o', output_file], capture_output=True, text=True)
+compile = subprocess.run(['hello.c', '-o', output_file], capture_output=True, text=True)
 
 if compile.returncode != 0:
     print(" Compilation failed:\n", compile.stderr)
